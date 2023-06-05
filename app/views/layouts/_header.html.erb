@@ -61,7 +61,7 @@
     <% if user_signed_in? %>
       <div class="dropdown mb-5">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="https://avatars.githubusercontent.com/u/25943867?s=40&v=4" alt="" width="32" height="32" class="rounded-circle me-2">
+          <img src="<%= gravatar_url(current_user.email) %>" alt="" width="32" height="32" class="rounded-circle me-2">
           <strong>
             <%= current_user.email.split("@").first %>
           </strong>
