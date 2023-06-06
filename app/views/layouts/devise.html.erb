@@ -11,9 +11,7 @@
   </head>
 
   <body class="d-flex align-items-center py-4 bg-body-tertiary">
-    <p style="color: green"><%= notice %></p>
-    <p style="color: red"><%= alert %></p>
-
+    <%= render "layouts/alert_message" %>
     <%= yield %>
   </body>
 </html>
