@@ -1,0 +1,21 @@
+<%# THIS IS COMMENT: iterate over the 'flash' hash and check the keys "notice" and "alert" %>
+
+<% flash.each do |key, value| %>
+  <% if key.to_s == "notice" %>
+    <div  class="alert alert-primary alert-success d-flex align-items-center justify-content-between">
+      <div>
+        <i class="bi bi-check-circle-fill me-2"></i>
+        <%= notice %>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% elsif key.to_s == "alert" %>
+    <div class="alert alert-danger d-flex align-items-center justify-content-between">
+      <div>
+        <i class="bi bi-exclamation-circle-fill me-2"></i>
+        <%= value %>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% end %>
+<% end %>

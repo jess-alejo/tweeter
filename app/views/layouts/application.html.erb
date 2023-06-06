@@ -8,7 +8,8 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  </head>
+
+    </head>
 
   <body class="container main bg-dark text-light d-flex h-100">
     <%= render "layouts/header" %>
@@ -16,7 +17,8 @@
       <div class="row h-100">
         <div class="col-7 main-content">
           <div class="px-3 pt-2">
-            <%= yield %>
+          <%= render "layouts/alert_message" %>
+          <%= yield %>
           </div>
         </div>
         <div class="col-5">
