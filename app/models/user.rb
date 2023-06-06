@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
+  has_many :tweets
+
   def avatar_url
     if avatar.attached?
       # avatar.variant(resize: "100x100").processed.url
