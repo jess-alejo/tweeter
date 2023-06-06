@@ -2,11 +2,7 @@
 
   <div class="user-details">
   <p>
-    <% if tweet.user.avatar.present? %>
-      <%= image_tag tweet.user.avatar.url, alt: "User Avatar", class: "rounded-circle" %>
-    <% else %>
-      <img src="<%= gravatar_url(tweet.user.email) %>" alt="User Avatar" class="rounded-circle">
-    <% end %>
+    <%= image_tag(tweet.user.avatar_url, class: "rounded-circle", alt: "avatar") %>
     <strong><%= tweet.user.username %> | <%= time_ago_in_words(tweet.created_at) %> ago</strong>
   </p>
 
