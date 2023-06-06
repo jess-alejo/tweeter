@@ -2,7 +2,7 @@
 
   <div class="user-details">
   <p>
-    <%= image_tag(tweet.user.avatar_url, class: "rounded-circle", alt: "avatar") %>
+    <%= image_tag(tweet.user.avatar_url, class: "rounded-circle", alt: "avatar", height: 32, width: 32) %>
     <strong><%= tweet.user.username %> | <%= time_ago_in_words(tweet.created_at) %> ago</strong>
   </p>
 

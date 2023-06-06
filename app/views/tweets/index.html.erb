@@ -2,6 +2,12 @@
 
 <h1 class="h4">Home</h1>
 
+<% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
 <div id="tweets">
   <% @tweets.each do |tweet| %>
     <%= render tweet %>
