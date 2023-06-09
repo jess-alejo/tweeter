@@ -65,8 +65,7 @@ class TweetsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet
-        @tweet = Tweet.find(params[:id])
-        log_tweet_set(@tweet)
+      @tweet = Tweet.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
@@ -80,12 +79,4 @@ class TweetsController < ApplicationController
       logger = ActiveSupport::Logger.new(log_file)
       logger.info(message)
     end
-
-    def log_tweet_set(tweet)
-      message = ">>>> Tweet Set: ID #{tweet.user_id}, Content: #{tweet.body}, Created at: #{tweet.created_at.to_formatted_s(:long)}"
-      log_file = Rails.root.join("log", "tweet_set.log")
-      logger = ActiveSupport::Logger.new(log_file)
-      logger.info(message)
-    end
-
 end
