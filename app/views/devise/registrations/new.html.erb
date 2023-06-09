@@ -11,13 +11,13 @@
     </div>
 
     <div class="field form-floating">
-    <%= f.password_field :password, class: "form-control", placeholder: "Password (minimum #{@minimum_password_length} characters)", autocomplete: "new-password" %>
-    <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control", placeholder: "Password (minimum #{@minimum_password_length} characters)", autocomplete: "new-password" %>
+      <%= f.label :password %>
     </div>
 
     <div class="field form-floating">
       <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password", autocomplete: "new-password" %>
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :password_confirmation %>
     </div>
 
     <div class="actions">
@@ -28,3 +28,8 @@
   <%= render "devise/shared/links" %>
 
 </main>
+<style>
+  .form-floating + .form-floating + .form-floating{
+  margin-top: -15px;
+  }
+</style>
