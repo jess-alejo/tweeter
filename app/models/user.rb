@@ -8,6 +8,10 @@ class User < ApplicationRecord
 
   has_many :tweets
 
+  # after_commit :log_user_creation, on: :create
+  after_create_commit :log_user_creation
+
+
   def avatar_url
     if avatar.attached?
       # avatar.variant(resize: "100x100").processed.url
@@ -28,4 +32,13 @@ class User < ApplicationRecord
       last_name
     ].compact_blank.join(" ")
   end
+
+  private
+
+    def log_user_creation
+      message = ">>>> New User Created: #{email} at #{created_at.to_formatted_s(:long)}"
+      log_file = Rails.root.join("log", "user_creation.log")
+      logger = ActiveSupport::Logger.new(log_file)
+      logger.info(message)
+    end
 end
