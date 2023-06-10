@@ -76,6 +76,7 @@ end
 
 group :test do
   gem "shoulda-matchers", "~> 5.3"
+  gem "simplecov", require: false
 end
 
 gem "cancancan"
