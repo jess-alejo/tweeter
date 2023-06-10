@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
   <head>
     <title>Tweeter</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
-    </head>
+  </head>
 
   <body class="container main bg-dark text-light d-flex h-100">
     <%= render "layouts/header" %>
@@ -28,5 +28,6 @@
         </div>
       </div>
     </main>
+    <%= render "shared/cta_bottom" %>
   </body>
 </html>
