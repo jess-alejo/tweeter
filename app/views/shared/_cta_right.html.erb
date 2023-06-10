@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title h6 fw-bold text-white">New to Tweeter?</h5>
+    <p class="card-text small">Sign up now to get your own personalized timeline!</p>
+
+    <div class="d-grid gap-2 mb-3">
+      <button class="btn btn-light rounded-5" type="button">
+        <i class="bi bi-google pe-1"></i>
+        <span class="small fw-medium">
+          Sign up with Google
+        </span>
+      </button>
+      <button class="btn btn-light rounded-5" type="button">
+        <i class="bi bi-apple pe-1"></i>
+        <span class="small fw-medium">
+          Sign up with Apple
+        </span>
+      </button>
+      <button class="btn btn-light rounded-5" type="button">
+        <span class="small fw-medium">
+          Create account
+        </span>
+      </button>
+    </div>
+
+    <p class="card-text small">
+      By signing up, yo agree to the
+      <%= link_to "Terms of Service", "#", class: "link-underline link-underline-opacity-0 link-underline-opacity-100-hover" %> and
+      <%= link_to "Privacy Policy", "#", class: "link-underline link-underline-opacity-0 link-underline-opacity-100-hover" %>, including
+      <%= link_to "Cookie Use.", "#", class: "link-underline link-underline-opacity-0 link-underline-opacity-100-hover" %>
+    </p>
+  </div>
+</div>

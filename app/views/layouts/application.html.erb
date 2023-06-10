@@ -22,8 +22,12 @@
           </div>
         </div>
         <div class="col-5">
-          <div class="widgets pe-4 pt-2">
-            <%= render "shared/search" %>
+          <div class="widgets ps-2 pe-4 pt-2">
+            <% if user_signed_in? %>
+              <%= render "shared/search" %>
+            <% else %>
+              <%= render "shared/cta_right" %>
+            <% end %>
           </div>
         </div>
       </div>
